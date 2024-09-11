@@ -32,7 +32,7 @@
 
 //     return 0;
 // }
-//4. Write a program using recursion to calculate nth element of Fibonacci series.
+// 4. Write a program using recursion to calculate nth element of Fibonacci series.
 
 // #include <stdio.h>
 // int fib(int);
@@ -50,13 +50,32 @@
 // printf("element at position %d is %d",n,fib(n));
 //     return 0;
 // }
-// 5. What will the following line produce in a C program: 
+// 5. What will the following line produce in a C program:
 // #include<stdio.h>
 // int main(){
-//     int a = 4; 
+//     int a = 4;
 // printf("%d %d %d \n", a, ++a, a++);
 
 //     return 0;
 // }
-// o/p of above program is depend on evalution order of compiler it maybe 4,5,4 or 6,6,4 both are correct 
-//6. Write a recursive function to calculate the sum of first ‘n’ natural numbers.
+// o/p of above program is depend on evalution order of compiler it maybe 4,5,4 or 6,6,4 both are correct
+// 6. Write a recursive function to calculate the sum of first ‘n’ natural numbers.
+int sumn(int);
+int sumn( int n)
+{
+    if (n == 1)
+    {
+        return 1;
+    }
+    return sumn(n - 1) + n;
+}
+
+#include <stdio.h>
+int main()
+{
+    int num;
+    printf("enter the number upto which you want sum \n");
+    scanf("%d", &num);
+    printf("sum of first %d natural number is %d \n", num, sumn(num));
+    return 0;
+}
