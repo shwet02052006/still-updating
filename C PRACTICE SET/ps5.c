@@ -60,22 +60,45 @@
 // }
 // o/p of above program is depend on evalution order of compiler it maybe 4,5,4 or 6,6,4 both are correct
 // 6. Write a recursive function to calculate the sum of first ‘n’ natural numbers.
-int sumn(int);
-int sumn( int n)
-{
-    if (n == 1)
-    {
-        return 1;
-    }
-    return sumn(n - 1) + n;
-}
+// int sumn(int);
+// int sumn( int n)
+// {
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     return sumn(n - 1) + n;
+// }
 
-#include <stdio.h>
-int main()
-{
-    int num;
-    printf("enter the number upto which you want sum \n");
-    scanf("%d", &num);
-    printf("sum of first %d natural number is %d \n", num, sumn(num));
-    return 0;
-}
+// #include <stdio.h>
+// int main()
+// {
+//     int num;
+//     printf("enter the number upto which you want sum \n");
+//     scanf("%d", &num);
+//     printf("sum of first %d natural number is %d \n", num, sumn(num));
+//     return 0;
+// }
+// 7. Write a program using function to print the following pattern (first n lines)
+// *
+// * * *
+// * * * * *
+
+// #include <stdio.h>
+// int main()
+// {
+//     int n;
+//     printf("Enter the value of n \n");
+//     scanf("%d", &n);
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < 2 * i + 1; j++)
+//         {
+
+//             printf("*");
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
