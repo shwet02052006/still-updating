@@ -1,2 +1,1 @@
-int a = 4; 
-printf("%d %d %d \n", a, ++a, a++);
+ printf("ad of sum is %u and avg is %u",ptr1,ptr2);
