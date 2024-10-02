@@ -1,5 +1,5 @@
 
-
+// IN Arrays we can go upto num[89] whis is used to store total 90 elememt from index 0 to 89.
 //================================================================================================================================================================>
 // Basic understanding of Arrays
 
@@ -50,7 +50,7 @@
 // #include <stdio.h>
 // int main()
 // {
-//     int num[3][3] = {{1, 2, 3}, {4, 5,6}};
+//     int num[3][3] = {{1, 2, 3}, {4, 5,6}}; // row and column
 //     printf("Print  2D array |: \n");
 //     for (int i = 0; i < 3; i++)
 //     {
