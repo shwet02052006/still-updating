@@ -13,6 +13,12 @@ int main()
     char s1[12] = "hello"; 
 char s2[] = "shwet"; 
 strcat(s1,s2); // s1 now contains "helloshwet" <no space in between>
-printf("%s",strcat(s1,s2));
+
+printf("%s\n",s1);
+//strcmp()
+strcmp("far", "joke");    // Negative value 
+strcmp("joke", "far");    // Positive value 
+int a=strcmp("a","b"); // according to ascii seq order if (a,b) -ve value 
+printf("%d\n",a);
     return 0;
 }
