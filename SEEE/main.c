@@ -1,27 +1,35 @@
 #include <stdio.h>
 int main()
 {
-    int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
+    int age;
+    printf("Enter your age for driving liscence :");
+    scanf("%d", &age);
+    if (age < 16)
+    {
 
-    if (num == 31)
-    {
-        printf("NAGPURE\n");
+        printf("your not eligible");
     }
-    else if (num == 49)
+    else if (age > 60)
     {
-        printf("NAGPURE east\n");
+
+        printf("your not eligible");
     }
-    else if (num == 40)
+    else if (age >= 18)
     {
-        printf("NAGPURE rural\n");
+
+        printf("you can drive vehicle with gear ");
     }
-    else
+
+    else if (age < 18)
     {
-        printf("error\n");
+
+        printf("you can drive vehicle without gear ");
+    }
+    else if (age > 16)
+    {
+
+        printf("you can drive vehicle without gear ");
     }
 
     return 0;
 }
-
