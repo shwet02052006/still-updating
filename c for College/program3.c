@@ -7,7 +7,8 @@ int main()
     scanf("%d", &n);
     printf("prime number are:\n");
     while (count < n)
-    {int isprime = 1;
+    {
+        int isprime = 1;
         for (i = 2; i < num; i++)
         {
             if (num % i == 0)
@@ -17,9 +18,9 @@ int main()
                 break;
             }
         }
-        if (isprime==1)
+        if (isprime ==1)
         {
-
+            ;
             printf("%d\t", num);
             count++;
         }
