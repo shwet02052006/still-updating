@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 { // FIB FOR 10 ELEMEMTS
-    int f1 = 1, f2 = 2, f3;
+    int f1 = 1, f2 = 2, f3=0;
     printf("%d \t%d", f1, f2);
     printf("\t");
     for (int i = 1; i <= 8; i++)

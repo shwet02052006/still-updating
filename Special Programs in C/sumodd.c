@@ -1,7 +1,7 @@
 // #include <stdio.h>
 // int main()
 // {
-//     int num = 1, n, count = 0, sum = 0;
+//     int num = 0, n, count = 0, sum = 0;
 //     printf("Enter the nth term:");
 //     scanf("%d", &n);
 //     while (count < n)
@@ -15,7 +15,7 @@
 //         num++;
 //     }
 //     printf("sum=%d", sum);
-//     return 0;
+// return 0;
 // }
 // #include <stdio.h>
 // int main()
@@ -47,3 +47,21 @@
 //     printf("sum=%d", sum);
 //     return 0;
 // }
+#include <stdio.h>
+int main()
+{
+    int count = 0, sum = 0;
+    for (int i = 1; count < 50; i++)
+    {
+
+        if (i % 2 != 0)
+        {
+            sum = sum + i;
+            count++;
+        }
+        
+    }
+
+    printf("sum=%d", sum);
+    return 0;
+}
