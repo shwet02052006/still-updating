@@ -1,35 +1,24 @@
-#include <stdio.h>
-#include <math.h>
+   #include <stdio.h>
 int main()
 {
-    long long n = 200, count = 0, num = 2;
-    int j = 1;
-    long long sum = 0;
+    int n, i, j, k;
+    printf("Enter the value n(number of rows): ");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
 
-    while (count < n)
     {
-        int isprime = 1;
+        for (int k = (n-i); k > 0; k--)
 
-        for (long long i = 2; i <= sqrt(num); i++)
+            printf(" ");
+
+        for (j = 1; j <= i; j++)
         {
 
-            if (num % i == 0)
-            {
-
-                isprime = 0;
-                break;
-            }
+            printf("* ");
         }
 
-        if (isprime == 1)
-        {
-
-            count++;
-            sum = sum + num;
-        }
-
-        num++;
+        printf("\n");
     }
-    printf("sum=%lld", sum);
+
     return 0;
 }
