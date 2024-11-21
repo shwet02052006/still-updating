@@ -261,3 +261,32 @@
 //        ***
 //         **
 //          *
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int n;
+//     char ch;
+
+//     printf("Enter the value of n: \n");
+//     scanf("%d", &n);
+
+//     for (int i = 1; i <= n; i++)
+//     {
+//         ch = 'A';
+//         for (int j = 1; j <= n; j++)
+//         {
+//             printf("%c\t", ch);
+//             ch++;
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+// A       B       C       D       E
+// A       B       C       D       E
+// A       B       C       D       E
+// A       B       C       D       E
+// A       B       C       D       E
