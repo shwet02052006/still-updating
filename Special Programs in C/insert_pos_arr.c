@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int arr[100] = {1, 2, 3, 4, 5}; // 0 1 2 3 4 5
+    int arr[100] = {1, 2, 3, 4, 5};
     printf("Array before insertion:\n");
 
     for (int j = 0; j < 5; j++)
@@ -12,7 +12,7 @@ int main()
     int pos = 2;
     int ele = 90;
 
-    for (int i = 4; i >= pos - 1; i--) // index-1 represents Position
+    for (int i = 4; i >= pos - 1; i--) 
     {
 
         arr[i + 1] = arr[i];
