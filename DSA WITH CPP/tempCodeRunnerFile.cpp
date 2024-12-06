@@ -1,1 +1,2 @@
- num++;
+
+    vec.push_back(2);

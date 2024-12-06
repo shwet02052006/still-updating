@@ -1,18 +1,15 @@
+
 #include <stdio.h>
 
-
-int sum(int *, int *);
-
-
-// Sum should change the value of x
-int sum(int* a, int* b){
-    *a = 6;
-    return (*a + *b);
+void callByReference(int *num) {
+    *num = *num + 10; // Modify the value at the address
+    printf("Inside callByReference: %d\n", *num);
 }
 
-int main(){
-    int x = 1, y=6;
-    printf("The sum of 1 and 6 is %d\n", sum(&x, &y));
-    printf("The value of x is %d", x);
+int main() {
+    int a = 5;
+    printf("Before callByReference: %d\n", a);
+    callByReference(&a); // Pass address of the variable
+    printf("After callByReference: %d\n", a); // Original value is changed
     return 0;
 }

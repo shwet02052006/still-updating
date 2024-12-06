@@ -1,4 +1,4 @@
-// #include <stdio.h> REVERSING AND STORING IN ANOTHER ARRAY
+// #include <stdio.h> //REVERSING AND STORING IN ANOTHER ARRAY
 // int main()
 // {
 //     int arr[5]={1,2,3,4,5};
@@ -123,4 +123,161 @@
 //     return 0;
 // }
 
+//  BINARY SEARCH
+// #include <stdio.h>
+// int main()
+// {
+//     int arr[] = {1, 2, 3, 4, 5, 6};
+//     int low = 0, key = 1, high = 5, mid;
+//     int flag = 0;
+
+//     while (high >= low)
+//     {
+//         mid = (low + high) / 2;
+//         if (arr[mid] == key)
+//         {
+//             flag = 1;
+//             printf("key is found at pos %d and at index %d", mid + 1, mid);
+//             break;
+//         }
+//         if (arr[mid] > key)
+//         {
+
+//             high = mid - 1;
+//         }
+//         if (arr[mid] < key)
+//         {
+
+//             low = mid + 1;
+//         }
+//     }
+//     if (flag == 0)
+//     {
+//         printf("not found ");
+//     }
+
+//     return 0;
+// }
+// STORE ELEMENTS SEPTLY IN EVEN N ODD
+// void putdata(int arr[], int n)
+// {
+//     for (int j = 0; j < n; j++)
+//     {
+//         printf(" %d\t", arr[j]);
+//     }
+//     printf("\n");
+// }
+// #include <stdio.h>
+// int main()
+// {
+//     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//     int odd[10], even[10];
+//     int k = 0;
+//     int j = 0;
+//     for (int i = 0; i < 10; i++)
+//     {
+//         if (arr[i] % 2 == 0)
+//         {
+
+//             even[j] = arr[i];
+//             j++;
+//         }
+//         else
+//         {
+//             odd[k] = arr[i];
+//             k++;
+//         }
+//     }
+
+//     putdata(even, j);//j and i rep size of an array
+//     putdata(odd, k);
+
+//     return 0;
+// }
+// VALUE IP AND OP AND TRANSPOSE in MATRIX
+// #include <stdio.h>
+// int main()
+// {
+//     int arr[3][3];
+
+//     printf("ENTER THE MATRIX ELEMENT :\n");
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+
+//             scanf("%d", &arr[i][j]);
+//         }
+//         printf("\n");
+//     }
+//         printf("PRINT THE MATRIX ELEMENT :\n");
+
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             printf("%d \t", arr[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//         printf("PRINT THE TRANSPOSE MATRIX ELEMENT :\n");
+
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             printf("%d \t", arr[j][i]);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+// ADDITION OF MATRIXX
+
+
+// #include <stdio.h>
+// void summ(int arr[3][3], int arr1[3][3])// specify the dimension or we can say size of array 
+// {
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             printf(" %d\t", arr[i][j] + arr1[i][j]);
+            
+//         }
+//         printf("\n");
+//     }
+// }
+// int main()
+// {
+//     int arr[3][3];
+//     int arr1[3][3];
+
+//     printf("ENTER THE MATRIX ELEMENT of 1 :\n");
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+
+//             scanf("%d", &arr[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     printf("ENTER THE MATRIX ELEMENT  of 2 :\n");
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+
+//             scanf("%d", &arr1[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     summ(arr, arr1);
+
+//     return 0;
+// }
 
