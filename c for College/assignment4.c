@@ -1,36 +1,43 @@
 #include <stdio.h>
-
-void summ(int arr[3][3], int arr1[3][3], int result[3][3])
+void putdata(int arr[3][3], int n)
 {
-
-    for (int i = 0; i < 3; i++)
+    for (int j = 0; j < n; j++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int i = 0; i < n; i++)
         {
-            result[i][j] = arr[i][j] + arr1[i][j];
+            printf(" %d\t", arr[j][i]);
         }
+         printf("\n");
     }
+  
 }
-
-void printMatrix(int matrix[3][3])
+void mul(int arr1[3][3], int arr2[3][3])
 {
-
+    int r[3][3];
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
-            printf("%d\t", matrix[i][j]);
+
+            int sum = 0;
+            for (int k = 0; k < 3; k++)
+            {
+                sum = sum + (arr1[i][k] * arr2[k][j]);
+            }
+            r[i][j] = sum;
         }
-        printf("\n");
     }
+    putdata(r, 3);
 }
 
 int main()
 {
-    int arr[3][3], arr1[3][3], result[3][3];
+    int arr[3][3];
+    int arr1[3][3];
+    int r[3][3];
+    int sum = 0;
 
-
-    printf("ENTER THE MATRIX ELEMENTS OF MATRIX 1:\n");
+    printf("Enter the elements of the first 3x3 matrix:\n");
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
@@ -39,21 +46,38 @@ int main()
         }
     }
 
-
-    printf("ENTER THE MATRIX ELEMENTS OF MATRIX 2:\n");
+    printf("Enter the elements of the second 3x3 matrix:\n");
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
             scanf("%d", &arr1[i][j]);
         }
+       
     }
 
+    // for (int i = 0; i < 3; i++)
+    // {
+    //     for (int j = 0; j < 3; j++)
+    //     {
+    //         sum = 0;
+    //         for (int k = 0; k < 3; k++)
+    //         {
+    //             sum += arr[i][k] * arr1[k][j];
+    //         }
+    //         r[i][j] = sum;
+    //     }
+    // }
 
-    summ(arr, arr1, result);
-
-    printf("THE RESULTANT MATRIX IS:\n");
-    printMatrix(result);
-
+    printf("The resultant matrix is:\n");
+    // for (int i = 0; i < 3; i++)
+    // {
+    //     for (int j = 0; j < 3; j++)
+    //     {
+    //         printf("%d ", r[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+mul(arr,arr1);
     return 0;
 }
