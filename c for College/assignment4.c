@@ -13,18 +13,18 @@ void putdata(int arr[3][3], int n)
 }
 void mul(int arr1[3][3], int arr2[3][3])
 {
-    int r[3][3];
+    int r[3][3]={0};
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
 
-            int sum = 0;
+            
             for (int k = 0; k < 3; k++)
             {
-                sum = sum + (arr1[i][k] * arr2[k][j]);
+                 r[i][j]= r[i][j] + (arr1[i][k] * arr2[k][j]);
             }
-            r[i][j] = sum;
+            
         }
     }
     putdata(r, 3);

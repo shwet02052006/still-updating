@@ -127,7 +127,7 @@
 // #include <stdio.h>
 // int main()
 // {
-//     int arr[] = {1, 2, 3, 4, 5, 6};
+//     int arr[] = {1, 1,2, 3, 4, 5, 6};
 //     int low = 0, key = 1, high = 5, mid;
 //     int flag = 0;
 
@@ -360,6 +360,6 @@
 //     //     }
 //     //     printf("\n");
 //     // }
-// mul(arr,arr1);
+//        mul(arr,arr1);
 //     return 0;
 // }

@@ -2,7 +2,7 @@
 int main()
 {
 int a=5;
-int *p=&a;// in print section just P will give address of  a if we put *P we get value present in a 
+int *p=&a;   // in print section just P will give address of  a if we put *P we get value present in a 
 int c=(int)&p;
 
 
@@ -14,11 +14,11 @@ printf("&p         =%i\n",&p);
 printf("&p with c  =%i\n",c);
 
 // NULL ptr 
-int* p2 = NULL; 
+int* p2 =NULL; 
 
 	// derefencing only if the pointer have any value 
 	if (p2 == NULL) { 
-		printf("Pointer does not point to anything"); 
+		printf("Pointer does not point to anything %d",p2); 
 	} 
 	else { 
 		printf("Value pointed by pointer: %d", *p2); 
