@@ -1,34 +1,36 @@
 #include <stdio.h>
-void putdata(int arr[], int n)
-{
-    for (int j = 0; j < n; j++)
-    {
-        printf(" %d\t", arr[j]);
-    }
-    printf("\n");
-}
-int main()
-{
-    int arr[] = {1, 2, 3, 4, 5, 6};
-    int odd[5], even[5];
-    int j = 0, k = 0,i=0;
+#include <string.h>
 
-    for ( i ; i < 6; i++)
-    {
-        if (arr[i] % 2 == 0)
-        {
-            even[j] = arr[i];
-            j++;
+int main() {
+    int flag = 0;
+    char str1[100];
+    char str2[100];
+
+    printf("Enter string 1: ");
+    scanf("%[^\n]%*c", str1); // %*c to consume newline left in the buffer
+
+    printf("Enter string 2: ");
+    scanf("%[^\n]%*c", str2);
+
+    int l1 = strlen(str1);
+    int l2 = strlen(str2);
+
+    if (l1 == l2) {
+        for (int i = 0; i < l1; i++) {
+            if (str1[i] != str2[i]) {
+                flag = 1;
+                break;
+            }
         }
-        else
-        {
-            odd[k] = arr[i];
-            k++;
-        }
+    } else {
+        flag = 1;
     }
-putdata(arr,i);
-putdata(even,j);
-putdata(odd,k);
+
+    if (flag == 0) {
+        printf("The strings are the same.\n");
+    } else {
+        printf("The strings are different.\n");
+    }
 
     return 0;
 }
