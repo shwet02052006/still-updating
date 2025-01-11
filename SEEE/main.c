@@ -1,36 +1,44 @@
 #include <stdio.h>
-#include <string.h>
+
+float celsius_to_fahrenheit(float celsius);
+float fahrenheit_to_celsius(float fahrenheit);
+void display_menu();
 
 int main() {
-    int flag = 0;
-    char str1[100];
-    char str2[100];
+    int choice;
+    float temperature, converted;
 
-    printf("Enter string 1: ");
-    scanf("%[^\n]%*c", str1); // %*c to consume newline left in the buffer
+    display_menu();
+    scanf("%d", &choice);
 
-    printf("Enter string 2: ");
-    scanf("%[^\n]%*c", str2);
-
-    int l1 = strlen(str1);
-    int l2 = strlen(str2);
-
-    if (l1 == l2) {
-        for (int i = 0; i < l1; i++) {
-            if (str1[i] != str2[i]) {
-                flag = 1;
-                break;
-            }
-        }
+    if (choice == 1) {
+        printf("Enter temperature in Celsius: ");
+        scanf("%f", &temperature);
+        converted = celsius_to_fahrenheit(temperature);
+        printf("Temperature in Fahrenheit: %.2f F\n", converted);
+    } else if (choice == 2) {
+        printf("Enter temperature in Fahrenheit: ");
+        scanf("%f", &temperature);
+        converted = fahrenheit_to_celsius(temperature);
+        printf("Temperature in Celsius: %.2f C\n", converted);
     } else {
-        flag = 1;
-    }
-
-    if (flag == 0) {
-        printf("The strings are the same.\n");
-    } else {
-        printf("The strings are different.\n");
+        printf("Invalid choice. Please run the program again.\n");
     }
 
     return 0;
+}
+
+float celsius_to_fahrenheit(float celsius) {
+    return (celsius * 9 / 5) + 32;
+}
+
+float fahrenheit_to_celsius(float fahrenheit) {
+    return (fahrenheit - 32) * 5 / 9;
+}
+
+void display_menu() {
+    printf("Temperature Conversion Program\n");
+    printf("1. Celsius to Fahrenheit\n");
+    printf("2. Fahrenheit to Celsius\n");
+    printf("Enter your choice (1 or 2): ");
 }
