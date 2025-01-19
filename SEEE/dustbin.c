@@ -1,37 +1,52 @@
 #include <stdio.h>
-#include <math.h> // Include math.h for sqrt function
+#include <stdlib.h>
+#include <math.h>
+
+// Function to estimate the upper limit for finding n primes
+int estimate_upper_limit(int n) {
+    if (n < 6) return 15; // Small cases
+    return (int)(n * log(n) + n * log(log(n))); // Prime number theorem estimate
+}
 
 int main() {
-    int num = 2, n, count = 0, i;
-
-    printf("Enter the nth term: ");
+    int n;
+    printf("Enter the number of primes to generate: ");
     scanf("%d", &n);
-    printf("Prime numbers are:\n");
 
-    while (count < n) {
-        int isprime = 1; // Assume num is prime
+    // Estimate the upper limit to ensure we find at least n primes
+    int limit = estimate_upper_limit(n);
 
-        // Skip checking for even numbers greater than 2
-        if (num > 2 && num % 2 == 0) {
-            isprime = 0; // If it's even and greater than 2, it's not prime
-        } else {
-            // Check for factors only up to the square root of num
-            for (i = 2; i * i <= num; i++) {
-                if (num % i == 0) {
-                    isprime = 0; // Not prime if divisible by i
-                    break; // Exit the for loop early
-                }
+    // Allocate a boolean array for the sieve
+    int *is_prime = (int *)calloc(limit + 1, sizeof(int));
+
+    // Initialize all numbers as prime
+    for (int i = 2; i <= limit; i++) {
+        is_prime[i] = 1;
+    }
+
+    // Sieve of Eratosthenes
+    for (int i = 2; i <= sqrt(limit); i++) {
+        if (is_prime[i]) {
+            for (int j = i * i; j <= limit; j += i) {
+                is_prime[j] = 0; // Mark multiples as not prime
             }
         }
+    }
 
-        // If isprime remains 1, then num is prime
-        if (isprime == 1) {
-            printf("%d\t", num);
+    // Collect and print the first n primes
+    int count = 0;
+    printf("The first %d prime numbers are:\n", n);
+    for (int i = 2; i <= limit && count < n; i++) {
+        if (is_prime[i]) {
+            printf("%d\t", i);
             count++;
         }
-
-        num++; // Move to the next number
     }
+
+    printf("\n");
+
+    // Free allocated memory
+    free(is_prime);
 
     return 0;
 }

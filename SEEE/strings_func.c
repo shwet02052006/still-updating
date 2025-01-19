@@ -15,7 +15,8 @@ char s2[] = "shwet";
 strcat(s1,s2); // s1 now contains "helloshwet" <no space in between>
 
 printf("%s\n",s1);
-//strcmp()
+//strcmp() 
+// Returns 0 if both str are same
 strcmp("far", "joke");    // Negative value 
 strcmp("joke", "far");    // Positive value 
 int a=strcmp("a","b"); // according to ascii seq order if (a,b) -ve value 
