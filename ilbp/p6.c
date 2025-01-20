@@ -12,6 +12,7 @@ int main()
         if (arr[mid] == n)
         {
             printf("number %d found at pos %d", n, mid + 1);
+            break;
         }
         if (arr[mid] > n)
         {
