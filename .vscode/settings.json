@@ -3,6 +3,8 @@
     "files.associations": {
         "ostream": "cpp",
         "iostream": "cpp",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "P8.C": "cpp",
+        "P9.C": "cpp"
     }
 }
